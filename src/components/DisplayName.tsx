@@ -1,15 +1,11 @@
-import firebaseAuth from "firebase/auth";
+import { User } from "firebase/auth";
+import { useAuthContext } from "../context/AuthContext";
 
-interface Props {
-  user: firebaseAuth.User | null;
-}
-
-export default function DisplayName({ user }: Props) {
-  let textContent: string | null = "Profiel";
-
-  if (user != null) { textContent = user.displayName; }
+export default function DisplayName() {
+    // Getting user from context
+    const user: User | null = useAuthContext();
 
   return (
-    <span>{textContent}</span>
+    <span>{user != null ? user.displayName : "Profiel"}</span>
   )
 }

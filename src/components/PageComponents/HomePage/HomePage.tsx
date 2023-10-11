@@ -13,7 +13,7 @@ export default function HomePage(props: Props) {
   return (
     <>
     <div className="flex h-4/5 items-center justify-center">
-      <section className="mx-2 w-1/2">
+      <section className="mx-2 w-1/2 px-12">
         <h1 className="text-center text-3xl font-semibold">
           Handprint/footprint calculator
         </h1>
