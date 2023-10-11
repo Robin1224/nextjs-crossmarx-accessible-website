@@ -16,8 +16,7 @@ const config: Config = {
         ...violet,
       },
       backgroundImage: {
-        "main-gradient":
-          "linear-gradient(69deg, rgba(234,213,249,1) 0%, rgba(129,69,181,1) 100%)",
+        "main-gradient": "linear-gradient(69deg, rgba(234,213,249,1) 0%, rgba(129,69,181,1) 100%)",
       },
       keyframes: {
         overlayShow: {
@@ -25,23 +24,18 @@ const config: Config = {
           to: { opacity: "1" },
         },
         contentShow: {
-          from: {
-            opacity: "0",
-            transform: "translate(-50%, -48%) scale(0.96)",
-          },
-          to: { 
-            opacity: "1", 
-            transform: "translate(-50%, -50%) scale(1)" 
-          },
+          from: { opacity: "0", transform: 'translate(-50%, -48%) scale(0.96)' },
+          to: { opacity: "1", transform: 'translate(-50%, -50%) scale(1)' },
         },
       },
       animation: {
-        overlayShow: "overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
-        contentShow: "contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+        overlayShow: 'overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
+        contentShow: 'contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 };
 
 export default config;
