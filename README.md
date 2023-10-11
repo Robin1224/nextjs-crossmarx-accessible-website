@@ -22,7 +22,8 @@ Deze website is een webapplicatie, waarbij kleine ondernemers een vragenlijst af
 De website is gebouwd in **React**.
 Ook is er gebruik gemaakt van de volgende libraries, frameworks en services:
 * NextJS
-* Vercel
+  * Fonts 
+  * Vercel
 * TailwindCSS
 * Typescript
 * Firebase
@@ -53,4 +54,16 @@ De website gebruikt de volgende functies van NextJS:
 
 ### TailwindCSS
 
-Tailwind is gebruikt om de website van styling te voorzien.
+<img src="https://github.com/Robin1224/nextjs-crossmarx/assets/81151231/c6123634-7c07-4d6a-9fb5-88a28f82b015" align="left" height="100">
+
+Tailwind is gebruikt om de website van styling te voorzien. Dit is gekozen vanwege de sterke integrering met NextJS, en de snelheid waarmee er een design gemaakt kan worden in Tailwind, en de fijne developer experience bij het testen van verschillende styling.
+
+<br clear="left"/>
+
+<img src="https://github.com/Robin1224/nextjs-crossmarx/assets/81151231/460fd343-27e0-4d21-b060-df3c9e7d2ded" align="right" width="500">
+
+### Typescript
+
+Het gehele project is geschreven in Typescript. Er is op gelet dat alle componenten typesafe zijn, en er is ook gelet op type safety bij het gebruiken van third party libraries. Dit maakt het makkelijker om code te debuggen, en zorgt er daarnaast voor dat code editors duidelijkere informatie kunnen geven over functies en variabelen in de code.
+
+<br clear="right"/>
