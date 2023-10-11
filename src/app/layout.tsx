@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
+import { AuthContextProvider } from "../context/AuthContext";
 
 const urbanist = Urbanist({ subsets: ["latin"] });
 
@@ -16,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl">
-      <body className={`${urbanist.className} bg-main-gradient`}>{children}</body>
+      <body className={`${urbanist.className} bg-main-gradient`}>
+        <AuthContextProvider>
+          {children}
+        </AuthContextProvider>
+      </body>
     </html>
   );
 }

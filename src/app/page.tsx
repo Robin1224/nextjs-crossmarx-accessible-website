@@ -3,7 +3,7 @@
 import { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import Medewerkers from "../components/PageComponents/Medewerkers";
-import HomePage from "../components/PageComponents/HomePage";
+import HomePage from "../components/PageComponents/HomePage/HomePage";
 import Profile from "../components/PageComponents/Profile";
 import {
   FaPeopleGroup,
@@ -14,14 +14,23 @@ import {
   FaHouseChimney,
 } from "react-icons/fa6";
 import { CgProfile } from "react-icons/cg";
+import { useAuthContext } from "@/src/context/AuthContext";
+import { User } from "firebase/auth";
 
 export default function Home() {
+  // TODO: Replace these with actual values
   const [medewerkersProgress, setMedewerkersProgress] = useState<number>(13);
   const [leveranciersProgress, setLeveranciersProgress] = useState<number>(30);
   const [omgevingProgress, setOmgevingProgress] = useState<number>(60);
   const [aandeelhoudersProgress, setAandeelhoudersProgress] = useState<number>(97);
   const [klantenProgress, setKlantenProgress] = useState<number>(100);
 
+  // Getting user from context
+  const user: User | null = useAuthContext();
+
+  // if (user != null) { console.log(user); }
+
+  // Universal styles for all tabs
   const triggerStyles: string =
     "text-mauve11 hover:text-violet11 data-[state=active]:text-violet11 flex h-20 flex-1 cursor-default select-none items-center justify-center bg-white px-5 text-[15px] leading-none outline-none first:rounded-tl-xl last:rounded-tr-xl data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current";
 
@@ -56,6 +65,10 @@ export default function Home() {
           </Tabs.Trigger>
           <Tabs.Trigger className={triggerStyles} value="profile">
             <CgProfile className="mr-2 w-8 h-8" />
+            <span>
+              {/* FIXME: Name not updating when logging in */}
+              {user != null ? user.displayName : "Profiel"}
+              </span>
           </Tabs.Trigger>
         </Tabs.List>
 

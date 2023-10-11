@@ -1,7 +1,5 @@
-import * as Progress from "@radix-ui/react-progress";
-import { useState } from "react";
-import ProgressBar from "../ProgressIndicators/ProgressBar";
-import SignUpDialog from "../Dialogs/SignUpDialog";
+import ProgressBar from "../../ProgressIndicators/ProgressBar";
+import AuthButtons from "./AuthButtons";
 
 interface Props {
   medewerkersProgress: number;
@@ -28,7 +26,7 @@ export default function HomePage(props: Props) {
           daarnaast ook toppunten en aandachtspunten om jouw footprint en
           handprint te verbeteren.
         </p>
-        <SignUpDialog />
+        <AuthButtons />
       </section>
       <section className="flex flex-col justify-center mx-2 pl-8 h-full w-1/2 rounded-lg bg-mauve2">
         <h3 className="text-2xl font-semibold mb-4">Progressie</h3>
