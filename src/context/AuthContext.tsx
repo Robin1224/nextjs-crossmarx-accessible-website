@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import firebaseAuth from 'firebase/auth';
+import { User } from 'firebase/auth';
 import {
     onAuthStateChanged,
     getAuth,
@@ -10,7 +10,7 @@ import firebase_app from '@/src/firebase/config';
 
 const auth = getAuth(firebase_app);
 
-export const AuthContext = React.createContext<firebase.User | null>(null);
+export const AuthContext = React.createContext<User | null>(null);
 
 export const useAuthContext = () => React.useContext(AuthContext);
 
@@ -19,7 +19,7 @@ export function AuthContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-    const [user, setUser] = React.useState<firebaseAuth.User | null>(null);
+    const [user, setUser] = React.useState<User | null>(null);
     const [loading, setLoading] = React.useState(true);
 
     React.useEffect(() => {
