@@ -4,8 +4,8 @@ Een webapplicatie waarbij kleine ondernemers door middel van een vragenlijst inz
 
 ## Inhoudsopgave
 
-* Beschrijving
-* Kenmerken
+* [Beschrijving](https://github.com/Robin1224/nextjs-crossmarx#beschrijving)
+* [Kenmerken](https://github.com/Robin1224/nextjs-crossmarx#kenmerken)
 
 ## Beschrijving
 
