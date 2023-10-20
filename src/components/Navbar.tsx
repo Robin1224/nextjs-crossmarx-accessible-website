@@ -17,32 +17,32 @@ export default function Navbar() {
 
   return (
     <Tabs.List
-          className="border-mauve6 flex shrink-0 border-b"
-          aria-label="Selecteer een categorie"
-        >
-          <Tabs.Trigger className={triggerStyles} value="home">
-            <FaHouseChimney className="mr-2" /> Home
-          </Tabs.Trigger>
-          <Tabs.Trigger className={triggerStyles} value="medewerkers">
-            <FaPeopleGroup className="mr-2" /> Medewerkers
-          </Tabs.Trigger>
-          <Tabs.Trigger className={triggerStyles} value="leveranciers">
-            <FaBoxesStacked className="mr-2" /> Leveranciers
-          </Tabs.Trigger>
-          <Tabs.Trigger className={triggerStyles} value="omgeving">
-            <FaTreeCity className="mr-2" /> Omgeving
-          </Tabs.Trigger>
-          <Tabs.Trigger className={triggerStyles} value="aandeelhouders">
-            <FaPeopleLine className="mr-2" /> Aandeelhouders
-          </Tabs.Trigger>
-          <Tabs.Trigger className={triggerStyles} value="klanten">
-            <FaCreditCard className="mr-2" /> Klanten
-          </Tabs.Trigger>
-          <Tabs.Trigger className={triggerStyles} value="profile">
-            <CgProfile className="mr-2 w-8 h-8" />
-              {/* FIXME: Name not updating after creating account */}
-              <DisplayName />
-          </Tabs.Trigger>
-        </Tabs.List>
-  )
+      className="flex shrink-0 border-b border-mauve6"
+      aria-label="Selecteer een categorie"
+    >
+      <Tabs.Trigger className={triggerStyles} value="home">
+        <FaHouseChimney className="mr-2" /> Home
+      </Tabs.Trigger>
+      <Tabs.Trigger className={triggerStyles} value="medewerkers">
+        <FaPeopleGroup className="mr-2" /> Medewerkers
+      </Tabs.Trigger>
+      <Tabs.Trigger className={triggerStyles} value="leveranciers">
+        <FaBoxesStacked className="mr-2" /> Leveranciers
+      </Tabs.Trigger>
+      <Tabs.Trigger className={triggerStyles} value="omgeving">
+        <FaTreeCity className="mr-2" /> Omgeving
+      </Tabs.Trigger>
+      <Tabs.Trigger className={triggerStyles} value="aandeelhouders">
+        <FaPeopleLine className="mr-2" /> Aandeelhouders
+      </Tabs.Trigger>
+      <Tabs.Trigger className={triggerStyles} value="klanten">
+        <FaCreditCard className="mr-2" /> Klanten
+      </Tabs.Trigger>
+      <Tabs.Trigger className={triggerStyles} value="profile">
+        <CgProfile className="mr-2 h-8 w-8" />
+        {/* FIXME: Name not updating after creating account */}
+        <DisplayName />
+      </Tabs.Trigger>
+    </Tabs.List>
+  );
 }

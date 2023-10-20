@@ -1,8 +1,17 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { RxCross2 } from "react-icons/rx";
 import { useState } from "react";
-import signUp from "@/src/firebase/auth/signup";
 import signIn from "@/src/firebase/auth/signin";
+
+async function submitHandler(
+  event: React.FormEvent<HTMLFormElement>,
+  email: string,
+  password: string,
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>,
+) {
+  event.preventDefault();
+  const userCurrent = await signIn(email, password).then(() => setOpen(false));
+}
 
 export default function SignInDialog({
   children,
@@ -15,24 +24,17 @@ export default function SignInDialog({
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Dialog.Trigger asChild>
-        {children}
-      </Dialog.Trigger>
+      {/* Render children of this component as the trigger button for opening the dialog */}
+      <Dialog.Trigger asChild>{children}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-blackA6 data-[state=open]:animate-overlayShow" />
+        {/* ---- Dialog content ---- */}
         <Dialog.Content className="fixed left-[50%] top-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none data-[state=open]:animate-contentShow">
           <Dialog.Title className="m-0 text-[17px] font-medium text-mauve12">
             Log in
           </Dialog.Title>
-          <form
-            onSubmit={async (event) => {
-              event.preventDefault();
-              const userCurrent = await signIn(
-                email,
-                password,
-              ).then(() => setOpen(false));
-            }}
-          >
+          {/* Linking submit logic to form */}
+          <form onSubmit={(event) => submitHandler(event, email, password, setOpen)}>
             <fieldset className="mb-[15px] flex items-center gap-5">
               <label
                 className="w-[90px] text-right text-[15px] text-violet11"

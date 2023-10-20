@@ -14,6 +14,7 @@ export default function Home() {
   const [klantenProgress, setKlantenProgress] = useState<number>(100);
 
   return (
+    // Container required for proper layout
     <div className="flex h-screen w-screen items-center justify-center">
       <Tabs.Root
         className="shadow-blackA2 flex h-[90vh] w-[90vw] flex-col shadow-[0_2px_10px]"
