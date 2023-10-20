@@ -19,7 +19,8 @@
     "radix-ui": "^1.0.1",
     "react": "latest",
     "react-dom": "latest",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "react-toggle-dark-mode": "^1.1.1"
   },
   "devDependencies": {
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
