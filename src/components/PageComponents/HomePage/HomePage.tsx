@@ -29,7 +29,7 @@ export default function HomePage(props: Props) {
         <AuthButtons />
       </section>
       <section className="flex flex-col justify-center mx-2 pl-8 h-full w-1/2 rounded-lg bg-mauve2">
-        <h3 className="text-2xl font-semibold mb-4">Progressie</h3>
+        <h2 className="text-2xl font-semibold mb-4">Progressie</h2>
         <ProgressBar label="Medewerkers" currentProgress={props.medewerkersProgress}/>
         <ProgressBar label="Leveranciers" currentProgress={props.leveranciersProgress} />
         <ProgressBar label="Omgeving" currentProgress={props.omgevingProgress} />
