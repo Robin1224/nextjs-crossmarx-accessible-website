@@ -12,6 +12,7 @@ export default function ProgressBar(props: Props) {
     <div className="flex mt-1">
       <Progress.Root
         className="bg-blackA2 relative h-6 w-4/5 overflow-hidden rounded-full"
+        aria-label={`${props.label} progressbar`}
         style={{
           // Fix overflow clipping in Safari
           // https://gist.github.com/domske/b66047671c780a238b51c51ffde8d3a0
